@@ -24,5 +24,48 @@ $pass->addFile('logo.png');
 if (!$pass->create(true)) {
     // Create and output the PKPass
     echo 'Error: ' . $pass->getError();
+    // below code save pkpass in your directory, return link from here in api response for calling from outside
+   //  if($out = $pass->create(false)) { // Create and output the PKPass
+   //                      $path = "pkpass/".$member_id.".pkpass" ;
+   //                      //$actualpath = "http://uscfightonline.com/".$path ;
+   //                      $currentPath = $_SERVER['PHP_SELF']; 
+   //                      $pathInfo = pathinfo($currentPath); 
+   //                      $hostName = $_SERVER['HTTP_HOST']; 
+   //                      $protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,5))=='https://'?'https://':'http://';
+   //                      $actualpath = $protocol.$hostName.$pathInfo['dirname'].$path;
+   //                      if(file_exists($actualpath)){
+   //                          chmod($actualpath, 0777);
+   //                           unlink($actualpath);
+   //                         }
+   //                       umask(0);
+        
+   //                       $fh = fopen("$path", 'w');
+   //                       if($fh){
+   //                           if(fwrite($fh,$out)){
+   //                               $response['success'] = API_SUCCESS;
+   //                               $response['link'] = $actualpath ;
+   //                               $response['message'] = 'File created ';
+   //                            }else{
+   //                               $response['success'] = API_ERROR;
+   //                               $response['link'] = 0 ;
+   //                               $response['message'] = 'File created but can not write';
+   //                           }
+   //                       }else{
+   //                           $response['success'] = API_ERROR;
+   //                           $response['link'] = 0 ;
+   //                           $response['message'] = 'Unable to open/create file ';
+   //                       }
+                        
+                        
+   //                  }else{
+                        
+   //                      $response['success'] = API_ERROR;
+   //                      $response['link'] = 0 ;
+			// $response['message'] = 'Error: '.$pass->getError();
+                       
+                        
+   //                  }
+                   
+   //                   return $response;
 }
 ?>
